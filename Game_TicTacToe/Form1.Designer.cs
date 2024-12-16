@@ -42,7 +42,6 @@
             this.pictbMark = new System.Windows.Forms.PictureBox();
             this.txtbPlayerName = new System.Windows.Forms.TextBox();
             this.tmCooldown = new System.Windows.Forms.Timer(this.components);
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.panel4 = new System.Windows.Forms.Panel();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.mENUToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -229,7 +228,6 @@
             this.Controls.Add(this.pnlChessBoard);
             this.Controls.Add(this.menuStrip2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Tic_Tac_Toe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tic_Tac_Toe";
@@ -262,7 +260,6 @@
         private System.Windows.Forms.PictureBox pictbMark;
         private System.Windows.Forms.ProgressBar prgbarTime;
         private System.Windows.Forms.Timer tmCooldown;
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStrip2;
