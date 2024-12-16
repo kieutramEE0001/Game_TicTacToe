@@ -66,7 +66,6 @@ namespace Game_TicTacToe
                 MessageBox.Show("Mất lượt! Kết thúc Game!");
             }
         }
-
         //Hàm bắt đầu Game mới
         void NewGame()
         {
@@ -74,25 +73,24 @@ namespace Game_TicTacToe
             tmCooldown.Stop();
             ChessBoard.Draw_ChessBoard();
         }
-        private void newGameToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-            NewGame();
-        }
-
         //Hàm thoát Game 
         void QuitGame()
         {
             Application.Exit();
-        }
-        private void quitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            QuitGame();
         }
         private void Tic_Tac_Toe_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("Bạn có chắc muốn thoát Game không?", "THÔNG BÁO", MessageBoxButtons.OKCancel)
                 != System.Windows.Forms.DialogResult.OK)
                 e.Cancel = true; //Thay đổi event
+        }
+        private void newGameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NewGame();
+        }
+        private void quitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            QuitGame();
         }
     }
 }

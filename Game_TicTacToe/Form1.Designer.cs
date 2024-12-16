@@ -36,17 +36,18 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.prgbarTime = new System.Windows.Forms.ProgressBar();
             this.pictbMark = new System.Windows.Forms.PictureBox();
             this.txtbPlayerName = new System.Windows.Forms.TextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.tmCooldown = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.mENUToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -54,7 +55,7 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictbMark)).BeginInit();
-            this.menuStrip1.SuspendLayout();
+            this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlChessBoard
@@ -119,6 +120,16 @@
             this.panel3.Size = new System.Drawing.Size(316, 156);
             this.panel3.TabIndex = 3;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Anaheim", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 70);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 28);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Turn of:";
+            // 
             // pictureBox3
             // 
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
@@ -154,6 +165,18 @@
             this.txtbPlayerName.Size = new System.Drawing.Size(167, 37);
             this.txtbPlayerName.TabIndex = 0;
             // 
+            // tmCooldown
+            // 
+            this.tmCooldown.Tick += new System.EventHandler(this.tmCooldown_Tick);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(200, 24);
+            this.menuStrip1.TabIndex = 0;
+            // 
             // panel4
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -165,20 +188,16 @@
             this.panel4.Size = new System.Drawing.Size(317, 107);
             this.panel4.TabIndex = 4;
             // 
-            // tmCooldown
+            // menuStrip2
             // 
-            this.tmCooldown.Tick += new System.EventHandler(this.tmCooldown_Tick);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mENUToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1084, 28);
-            this.menuStrip1.TabIndex = 5;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Size = new System.Drawing.Size(1084, 28);
+            this.menuStrip2.TabIndex = 5;
+            this.menuStrip2.Text = "menuStrip2";
             // 
             // mENUToolStripMenuItem
             // 
@@ -193,39 +212,30 @@
             // 
             this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
             this.newGameToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
+            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.newGameToolStripMenuItem.Text = "New Game";
-            this.newGameToolStripMenuItem.Click += new System.EventHandler(this.newGameToolStripMenuItem_Click_1);
+            this.newGameToolStripMenuItem.Click += new System.EventHandler(this.newGameToolStripMenuItem_Click);
             // 
             // quitToolStripMenuItem
             // 
             this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
             this.quitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
-            this.quitToolStripMenuItem.Size = new System.Drawing.Size(218, 26);
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.quitToolStripMenuItem.Text = "Quit";
             this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Anaheim", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 70);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 30);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Turn of:";
             // 
             // Tic_Tac_Toe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(1084, 710);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlChessBoard);
-            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.menuStrip2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Tic_Tac_Toe";
@@ -240,8 +250,8 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictbMark)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,11 +271,12 @@
         private System.Windows.Forms.ProgressBar prgbarTime;
         private System.Windows.Forms.Timer tmCooldown;
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.ToolStripMenuItem mENUToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newGameToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label1;
     }
 }
 
